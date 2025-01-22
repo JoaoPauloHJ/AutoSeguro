@@ -359,6 +359,7 @@ body {
     }
     .tamanho__grid {
         width: 300px;
+        height: 500px;
     }
 
     .container__botaoLogin {
@@ -405,16 +406,15 @@ body {
     }
 
      .links {
-        padding: 0.6em; /* Padding menor */
         font-size: 15px; /* Fonte ainda menor */
         border-radius: 3px; /* Arredonda menos os cantos */
         border-bottom: solid 1px black; /* Diminui a espessura da borda */
     }
 
     .container_links {
-        display: block;
+        display: grid;
+        gap: 0;
     }
-
 }
 
 
