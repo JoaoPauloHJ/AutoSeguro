@@ -329,14 +329,12 @@ body {
     .container__botaoLogin {
         top: 25%;
         left: 50%;
-        transform: translateX(-50%); /* Centraliza horizontalmente */
         font-size: 18px; /* Reduz o tamanho da fonte */
     }
 
     .container__botaoCadastro {
         top: 50%;
         left: 50%;
-        transform: translateX(-50%);
         font-size: 18px;
     }
 }
