@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro</title>
+        <style>
+
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/mensagem.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="box">
+            <form action="">
+                <fieldset>
+                    <legend><b>Mensagem</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="celular" id="celular" class="inputUser" required>
+                        <label for="celular" class="labelInput">Celular</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox2">
+                        <textarea name="endereco" id="endereco" class="inputUser2" required></textarea>
+                        <label for="endereco" class="labelInput2">Mensagem</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+            
+        </div>
+        <a href="index.html" class="container__botaoLogin">Voltar</a>
+        
+    </body>
+</html>

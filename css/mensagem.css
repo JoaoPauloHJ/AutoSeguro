@@ -1,0 +1,161 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --branco--gelo: #ffffffdf;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --cor-de-fundo-padrao: #e9f5f8;
+    --fonte-principal: 'Inter';
+    --botao-efeito-colorido: #0eddf4;
+    --brackground-antigo: #201b2c;
+}
+/* background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71)); Antigo*/ 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #99dff1, #e9f5f8);
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+    color: white;
+}
+fieldset {
+    border: 3px solid #00ccfe;
+}
+legend {
+    border: 1px solid #00ccfe;
+    padding: 10px;
+    text-align: center;
+    background-color: #00ccfe;
+    border-radius: 8px;
+}
+.inputBox {
+    position: relative;
+}
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.inputUser:focus ~ .labelInput , .inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+
+.inputBox2 {
+    position: relative;
+}
+
+.inputUser2 {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    height: 150px; /* Define a altura da caixa de texto */
+
+    letter-spacing: 1px;
+    resize: none; /* Desativa o redimensionamento manual */
+    box-sizing: border-box; /* Inclui padding no cálculo total do tamanho */
+}
+
+.labelInput2 {
+    position: absolute;
+    top: 0px; /* Ajusta a posição inicial do label */
+    left: 0px;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+
+.inputUser2:focus ~ .labelInput2 , .inputUser2:valid ~ .labelInput2{
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+#submit {
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit:hover {
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
+}
+
+.container__botaoLogin {
+    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+}   
+
+.container__botaoLogin:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.2); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+
+@media only screen and (max-width: 950px){
+    .box {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 728px){
+    .box {
+        margin-top: 2em;
+        width: 80%;
+    }   
+}
+
+@media only screen and (max-width: 600px){
+    .box {
+        margin-top: 4em;
+        width: 80%;
+    }
+    
+}
