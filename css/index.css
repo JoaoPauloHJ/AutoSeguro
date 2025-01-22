@@ -28,6 +28,7 @@ body {
     border-radius: 5px;
     border-bottom: solid black;
     padding: 1em;
+    padding-bottom: 6px;
     color: var(--cor-de-fundo);
     text-decoration: none;
     transition: all 0.3s ease;
@@ -162,14 +163,12 @@ body {
 }
 
 
-
 .container__secundario {
     display: grid;
     text-align: center;
     justify-items: center;
     grid-template-columns:auto auto auto;
-    margin-top: 1em;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
 }
 
 
@@ -185,7 +184,6 @@ body {
     color: var(--cor-de-fundo);
     font-size: 28px;
     font-weight: 700;
-    margin-top: 50px;
     margin-bottom: 0px;
     height: 36px;
     text-decoration: none;
@@ -312,7 +310,7 @@ body {
     object-fit: contain; /* Mantém a proporção da imagem */
     transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
     border-radius: 10px; /* Borda arredondada opcional */
-    width: 450px;
+    width: 400px;
     height: 350px;
 }
 
@@ -386,6 +384,9 @@ body {
         font-size: 16px;
     }
     */
+    .descricao__texto {
+        font-size: 24px;
+    }
 
     .secundario__imagem.imagem {
         width: 80vw;
@@ -405,13 +406,13 @@ body {
 
      .links {
         padding: 0.6em; /* Padding menor */
-        font-size: 12px; /* Fonte ainda menor */
+        font-size: 15px; /* Fonte ainda menor */
         border-radius: 3px; /* Arredonda menos os cantos */
         border-bottom: solid 1px black; /* Diminui a espessura da borda */
     }
 
     .container_links {
-        gap: 1em; /* Menor espaçamento entre os elementos */
+        display: block;
     }
 
 }
