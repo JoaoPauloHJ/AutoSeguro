@@ -368,14 +368,12 @@ body {
         width: 60%; /* Ajusta a largura para caber na tela */
         top: 62%; /* Remove o posicionamento superior */
         left: 50%;
-        transform: translateX(-50%);
         font-size: 16px;
     }
     .container__botaoCadastro {
         width: 60%; /* Ajusta a largura para caber na tela */
         top: 62%; /* Remove o posicionamento superior */
         left: 50%;
-        transform: translateX(-50%);
         font-size: 16px;
     }
 
