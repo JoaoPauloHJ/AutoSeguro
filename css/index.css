@@ -92,7 +92,7 @@ body {
 .container__botaoCadastro:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.1); /* Aumenta o botão */
+    transform: scale(1.0); /* Aumenta o botão */
     box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
 }
 
@@ -357,23 +357,35 @@ body {
     .container_principal {
         background-position:top;
         margin-top: 3em;
-        height: 50vh;
+        height: 30vh;
     }
     .tamanho__grid {
         width: 300px;
     }
+
     .container__botaoLogin {
-        width: 60%; /* Ajusta a largura para caber na tela */
-        top: 62%; /* Remove o posicionamento superior */
+        display: none;
+    }
+    .container__botaoCadastro {
+        display: none;
+    }
+
+    /*
+    .container__botaoLogin {
+        width: 50%; 
+        top: 62%;
         left: 50%;
+        transform: translate(-50%);
         font-size: 16px;
     }
     .container__botaoCadastro {
-        width: 60%; /* Ajusta a largura para caber na tela */
-        top: 62%; /* Remove o posicionamento superior */
+        width: 50%;  
+        top: 62%;  
         left: 50%;
+        transform: translate(-50%);
         font-size: 16px;
     }
+    */
 
     .secundario__imagem.imagem {
         width: 80vw;
