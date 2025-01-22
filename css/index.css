@@ -1,0 +1,653 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --branco--gelo: #ffffffdf;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --cor-de-fundo-padrao: #e9f5f8;
+    --fonte-principal: 'Inter';
+    --botao-efeito-colorido: #0eddf4;
+}
+
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-fundo);
+    background: linear-gradient(to bottom, #e9f5f8, #e9f5f8, #e9f5f8);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.links {
+    background-color: rgba(246, 6, 6, 0);
+    border-radius: 5px;
+    border-bottom: solid black;
+    padding: 1em;
+    color: var(--cor-de-fundo);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+.container_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.container_principal {
+    background-image: url('/img/chapanela1920.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative; /* Importante para elementos filhos com posição absoluta */
+}
+
+.container__botaoLogin {
+    position: absolute;
+    top: 10%; /* 20% a partir do topo do contêiner */
+    left: 80%; /* 30% a partir da esquerda */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 400;
+    width: 6em;
+    text-align: center;
+}
+.container__botaoCadastro {
+    position: absolute;
+    top: 10%; /* 20% a partir do topo do contêiner */
+    left: 80%; /* 30% a partir da esquerda */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin-top: 4em;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 400;
+    width: 6em;
+    text-align: center;
+}
+
+.container__botaoLogin:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.1); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+.container__botaoCadastro:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.1); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+.container__botaoP_S {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-de-fundo);
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+    width: 16em; /* Largura do botão */
+    height: 1em; /* Altura do botão */
+    font-size: 20px;
+    font-weight: 400;
+}
+.container__botaoP_S:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.2); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+.container__botaoP:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.2); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+}
+
+.tamanho-grid-botao {
+    border: solid red;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.3); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cor-de-fundo);
+}
+
+.container__aviso2 {
+    font-size: 12px;
+    color: var(--cor-de-fundo)
+}
+
+
+
+.container__secundario {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    grid-template-columns:auto auto auto;
+    margin-top: 1em;
+    margin-bottom: 6em;
+}
+
+
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cor-de-fundo);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    height: 36px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.descricao__texto:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transition: all 0.3s ease;
+    transform: scale(1.1); /* Aumenta o botão */
+}
+
+.descricao__texto2 {
+    color: var(--cinza-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 4em;
+    text-decoration: none;
+ 
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+.dispositivos {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.dispositivos__titulo {
+    font-size: 30px;
+    color: var(--cor-de-fundo);
+}
+
+
+
+.titulo_pix {
+    font-size: 20px;
+    color: var(--cor-de-fundo);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--cor-de-fundo);
+    margin: 0em 1em 0em 1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style-type: none;
+    color: var(--branco-principal);
+    margin: 2em 10em 2em 10em;
+}
+
+.rodape__logo {
+    margin-bottom: 2em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em;
+    margin-bottom: 2em;
+    gap: 3em;   
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: #fb081c;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.secundario__imagem {
+    width: 60%;
+}
+
+.imagem_pix {
+    object-fit: cover; /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
+    border-radius: 10px; /* Borda arredondada opcional */
+    width: 400px;
+}
+
+.imagem_pix:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+
+.imagemF {
+    align-items: center;
+}
+
+.imagem {
+    object-fit: contain; /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
+    border-radius: 10px; /* Borda arredondada opcional */
+    width: 450px;
+    height: 350px;
+}
+
+.imagem:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 10% */
+}
+
+.tamanho__grid {
+    width: 400px;
+    height: 550px;
+}
+
+@media (max-width: 1080px) {
+    .container__botaoLogin {
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .container__botaoCadastro {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+}
+
+/* Para telas menores que 768px (Ex: Tablets) */
+@media (max-width: 768px) {
+    .container__botaoLogin {
+        top: 20%;
+        left: 10%; /* Ajusta para ficar mais visível */
+    }
+
+    .container__botaoCadastro {
+        top: 40%;
+        left: 10%;
+    }
+}
+
+/* Para telas menores que 480px (Ex: Celulares pequenos) */
+@media (max-width: 480px) {
+    .container_principal {
+        background-position:top;
+        margin-top: 3em;
+        height: 50vh;
+    }
+    .tamanho__grid {
+        width: 300px;
+    }
+    .container__botaoLogin {
+        width: 60%; /* Ajusta a largura para caber na tela */
+        top: 62%; /* Remove o posicionamento superior */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+    }
+    .container__botaoCadastro {
+        width: 60%; /* Ajusta a largura para caber na tela */
+        top: 62%; /* Remove o posicionamento superior */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+    }
+
+    .secundario__imagem.imagem {
+        width: 80vw;
+    }
+    .container__secundario {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container__botao {
+        margin-top: 1em;
+    }
+    .imagem_pix {
+        width: 300px;
+    }
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+     .links {
+        padding: 0.6em; /* Padding menor */
+        font-size: 12px; /* Fonte ainda menor */
+        border-radius: 3px; /* Arredonda menos os cantos */
+        border-bottom: solid 1px black; /* Diminui a espessura da borda */
+    }
+
+    .container_links {
+        gap: 1em; /* Menor espaçamento entre os elementos */
+    }
+
+}
+
+
+/*  @media screen and (max-width: 1080px) {
+    .container {
+        margin-bottom: 2em;
+    }
+    .principal {
+        width: 100%;
+        height: 100vh;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: top;
+        margin-top: 3em;
+    }
+    .container__botaoLogin {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 20%;
+        left: 12%;
+    }
+    .container__botaoLogin2 {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 22%;
+        left: 12%;
+    }
+
+    .container__secundario {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container__botao {
+        margin-top: 1em;
+    }
+    .secundario__imagem.imagem {
+        width: 80vw;
+    }
+    .container__imagem {
+        margin-top: 11em;
+        width: 30vw;
+    }
+    .descricao__texto {
+        font-size: 20px;
+    }
+    .container__aviso2 {
+        font-size: 10px;
+        color: var(--cor-de-fundo)
+    }
+    
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+    .secundario__imagem {
+        width: 70vw;
+    }
+    .rodape__lista {
+        display: block;
+    }
+    .container__botaoP_S {
+        color: var(--branco-principal);
+    }
+    
+    .container_links {
+        display: block;
+        margin-top: 1em;
+    }
+
+}
+
+/*@media screen and (max-width: 430px) {
+    .container {
+        margin-bottom: 2em;
+        height: 100%;
+    }
+    .tamanho__grid {
+        width: 300px;
+    }
+    .principal {
+        background-position:top;
+        margin-top: 3em;
+    }
+    .container__titulo {
+        display: none;
+    }
+    .container__botaoLogin {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 50%;
+        left: 30%;
+    }
+    .container__botaoLogin2 {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 55%;
+        left: 30%;
+    }
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+    .container__secundario {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container__botao {
+        margin-top: 1em;
+    }
+    .secundario__imagem.imagem {
+        width: 80vw;
+    }
+    .container__imagem {
+        margin-top: 11em;
+        width: 30vw;
+    }
+    .descricao__texto {
+        font-size: 20px;
+    }
+    .container__aviso2 {
+        font-size: 10px;
+        color: var(--cor-de-fundo)
+    }
+    
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+    .secundario__imagem {
+        width: 70vw;
+    }
+    .rodape__lista {
+        display: block;
+    }
+    .container__botaoP_S {
+        color: var(--branco-principal);
+    }
+    .imagem_pix {
+        width: 300px;
+    }
+    .container_links {
+        display: block;
+        margin-top: 1em;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        background-image: url(../img/chapanela1200.png);
+    }
+    .tamanho__grid {
+        width: 300px;
+    }
+    .principal {
+        background-position:top;
+        margin-top: 2em;
+        margin-bottom: 5em;
+    }
+    .container__titulo {
+        display: none;
+    }
+    .container__botaoLogin {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 60%;
+        left: 28%;
+        
+    }
+    .container__botaoLogin2 {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        top: 65%;
+        left: 28%;
+    }
+    .dispositivos__titulo {
+        font-size: 40px;
+    }
+    .container__secundario {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container__botao {
+        margin-top: 1em;
+    }
+    .secundario__imagem.imagem {
+        width: 80vw;
+    }
+    .container__imagem {
+        margin-top: 11em;
+        width: 30vw;
+    }
+    .descricao__texto {
+        font-size: 20px;
+    }
+    .container__aviso2 {
+        font-size: 10px;
+        color: var(--cor-de-fundo)
+    }
+    
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .secundario {
+        margin: 0;
+        text-align: center;
+    }
+    .secundario__imagem {
+        width: 70vw;
+    }
+    .rodape__lista {
+        display: block;
+    }
+    .container__botaoP_S {
+        color: var(--branco-principal);
+    }
+    .imagem_pix {
+        width: 300px;
+    }
+    .container_links {
+        display: block;
+        margin-top: 1em;
+    } */
+
+
+
+
+    
+
+
+
+
