@@ -137,20 +137,6 @@ legend {
     box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
 }
 
-.senha {
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
-    border: none;
-    padding: 20px;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 @media only screen and (max-width: 950px){
     .box {
@@ -170,10 +156,5 @@ legend {
         margin-top: 2em;
         width: 80%;
     }
-    .senha {
-        width: 60%;
-        text-align: center;
-    }
-    
     
 }
