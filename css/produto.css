@@ -156,6 +156,10 @@ body {
     text-decoration: none;
     margin-bottom: 1em;
     transition: all 0.3s ease;
+    width: 7em; /* Largura do botão */
+    height: 1em; /* Altura do botão */
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .tamanho-grid-botao {
@@ -186,10 +190,8 @@ body {
 
 
 .container__secundario {
-    display: grid;
     text-align: center;
     justify-items: center;
-    grid-template-columns:auto auto auto;
     margin-bottom: 2em;
 }
 
@@ -249,68 +251,9 @@ body {
     color: var(--cor-de-fundo);
 }
 
-
-
 .titulo_pix {
     font-size: 20px;
     color: var(--cor-de-fundo);
-}
-
-.lista__item {
-    font-size: 32px;
-    color: var(--cor-de-fundo);
-    margin: 0em 1em 0em 1em;
-}
-
-.dispositivos__lista {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    list-style-type: none;
-    color: var(--branco-principal);
-    margin: 2em 10em 2em 10em;
-}
-
-.rodape__logo {
-    margin-bottom: 2em;
-}
-
-.rodape__lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 1em;
-    margin-bottom: 2em;
-    gap: 3em;   
-}
-
-.lista__link a {
-    text-decoration: none;
-    color: var(--branco-principal);
-    margin-left: 1em;
-}
-
-.lista__link a:hover {
-    color: var(--botao-azul);
-}
-
-.lista__link a:active {
-    color: #fb081c;
-}
-
-.rodape__texto {
-    margin: 1em 0;
-    color: var(--cinza-secundario);
-    font-size: 14px;
-}
-
-.rodape {
-    text-align: center;
-    margin: 5em 3em;
-}
-
-.secundario__imagem {
-    width: 60%;
 }
 
 .imagem_pix {
@@ -324,25 +267,10 @@ body {
     transform: scale(1.1); /* Aumenta a imagem em 10% */
 }
 
-.imagemF {
-    align-items: center;
-}
-
 .imagem {
-    object-fit: contain; /* Mantém a proporção da imagem */
-    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
     border-radius: 10px; /* Borda arredondada opcional */
     width: 400px;
-    height: 350px;
-}
-
-.imagem:hover {
-    transform: scale(1.2); /* Aumenta a imagem em 10% */
-}
-
-.tamanho__grid {
-    width: 400px;
-    height: 550px;
+    align-items: center;
 }
 
 @media (max-width: 1080px) {
