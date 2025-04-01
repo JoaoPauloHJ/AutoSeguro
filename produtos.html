@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script src="java\comandos.js"></script>
     
 </head>
 
@@ -18,12 +17,11 @@
     <section class="container_links">
         <a target="_blank" href="https://maps.app.goo.gl/PjCHYqWU3B3oJsFK9" class="links">Localização</a>
         <a href="index.html" class="links">Voltar ao Menu</a>
+        
     </section>
 
     <section class="container__secundario">
         <div class="tamanho__grid2">
-            <!-- <a href="https://www.mercadolivre.com.br/liquidificador-ph900-com-12-velocidades-e-pulsar-potncia-de-1200w-cor-preto-philco-127v/p/MLB15578941?attributes=COLOR:Preto" 
-                target="_blank">-->
                 <br><br>
                 <img id="produto-imagem" src="" alt="Imagem do Produto" class="secundario__imagem imagem2">
         
@@ -31,7 +29,7 @@
         
                 <p class="container__aviso2">*Clique acima para visitar o site sugerido.</p>
 
-                <a id="botao-presentear" href="https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Liquidificador." target="_blank"
+                <a id="botao-presentear" href = produto.link target="_blank"
                 class="container__botao secundario__botao">Presentear!</a>
                 
             </div>
@@ -58,6 +56,50 @@
         <br><br>
     </section>
 -->
-</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const nomeProduto = params.get('nome');
 
+        const produtos = {
+            "liquidificador": {
+                nome: "Liquidificador",
+                imagem: "../img/liquidificador.png", // Adicione ../ se necessário
+                link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Liquidificador."
+            },
+            "airfryer": {
+                nome: "Air Fryer",
+                imagem: "../img/airfryer.png", // Adicione ../ se necessário
+                link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Air%20Fryer."
+            },
+            "sanduicheira": {
+                nome: "Sanduicheira",
+                imagem: "../img/sandui.png", // Adicione ../ se necessário
+                link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Sanduicheira."
+            },
+            "jogodepanelas": {
+                nome: "Jogo De Panelas",
+                imagem: "../img/panelas.png", // Adicione ../ se necessário
+                link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Jogo%20de%20Panelas)."
+            },
+            "panelaDepressao": {
+                nome: "Panela De Pressao",
+                imagem: "../img/panelapressao.png", // Adicione ../ se necessário
+                link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Panela%20de%20Pressao)."
+            }
+        };
+        
+        if (nomeProduto && produtos[nomeProduto]) {
+            const produto = produtos[nomeProduto];
+            document.getElementById("produto-nome").textContent = produto.nome;
+            const imgElement = document.getElementById("produto-imagem");
+            imgElement.src = produto.imagem;
+            imgElement.alt = produto.nome;
+            document.getElementById("botao-presentear").href = produto.link;
+        } else {
+            document.querySelector(".tamanho__grid2").innerHTML = "<h1>Produto não encontrado</h1>";
+        }
+    });
+</script>
+</body>
 </html>

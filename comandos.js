@@ -26,38 +26,38 @@ var intervalo = setInterval(atualizarContador, 1000);
 // Executa a função imediatamente para evitar espera de 1s
 atualizarContador();
 
-function abrirProduto(produto) {
-    window.location.href = `produto.html?nome=${produto}`;
-}
+// function abrirProduto(produto) {
+//     window.location.href = `produto.html?nome=${produto}`;
+// }
 
-// Captura os parâmetros da URL
-const params = new URLSearchParams(window.location.search);
-const nomeProduto = params.get('nome');
+// document.addEventListener("DOMContentLoaded", function () {
+//     const params = new URLSearchParams(window.location.search);
+//     const nomeProduto = params.get('nome');
 
-// Define os dados dos produtos
-const produtos = {
-    "liquidificador": {
-        nome: "Liquidificador",
-        imagem: "img/liquidficador.png",
-        link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Liquidificador."
-    },
-    "airfryer": {
-        nome: "Air Fryer",
-        imagem: "img/airfryer.png",
-        link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Air%20Fryer."
-    },
-    "sanduicheira": {
-        nome: "Sanduicheira",
-        imagem: "img/sandui.png",
-        link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Sanduicheira."
-    }
-};
+//     const produtos = {
+//         "liquidificador": {
+//             nome: "liquidificador",
+//             imagem: "img/liquidificador.png",
+//             link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Liquidificador."
+//         },
+//         "airfryer": {
+//             nome: "Air Fryer",
+//             imagem: "img/airfryer.png",
+//             link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Air%20Fryer."
+//         },
+//         "sanduicheira": {
+//             nome: "Sanduicheira",
+//             imagem: "img/sandui.png",
+//             link: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20-%20Sanduicheira."
+//         }
+//     };
 
-// Verifica se o produto existe
-if (produtos[nomeProduto]) {
-    document.getElementById("produto-nome").textContent = produtos[nomeProduto].nome;
-    document.getElementById("produto-imagem").src = produtos[nomeProduto].imagem;
-    document.getElementById("botao-presentear").href = produtos[nomeProduto].link;
-} else {
-    document.querySelector(".tamanho__grid2").innerHTML = "<h1>Produto não encontrado</h1>";
-}
+//     if (document.getElementById("produto-imagem") && produtos[nomeProduto]) {
+//         document.getElementById("produto-nome").textContent = produtos[nomeProduto].nome;
+//         document.getElementById("produto-imagem").src = produtos[nomeProduto].imagem;
+//         document.getElementById("produto-imagem").alt = produtos[nomeProduto].nome;
+//         document.getElementById("botao-presentear").href = produtos[nomeProduto].link;
+//     } else {
+//         document.querySelector(".tamanho__grid2").innerHTML = "<h1>Produto não encontrado</h1>";
+//     }
+// });
