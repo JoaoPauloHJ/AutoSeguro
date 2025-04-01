@@ -190,8 +190,10 @@ body {
 
 
 .container__secundario {
+    display: grid;
     text-align: center;
     justify-items: center;
+    grid-template-columns: auto auto;
     margin-bottom: 2em;
 }
 
