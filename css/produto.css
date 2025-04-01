@@ -206,20 +206,11 @@ body {
 
 .descricao__texto {
     color: var(--cor-de-fundo);
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 700;
-    margin-top: 1em;
-    margin-bottom: 1px;
-    height: 36px;
     text-decoration: none;
-    transition: all 0.3s ease;
 }
 
-.descricao__texto:hover {
-    color: var(--cor-de-fundo);
-    transition: all 0.3s ease;
-    transform: scale(1.1); /* Aumenta o botão */
-}
 
 .descricao__texto2 {
     color: var(--cinza-secundario);
@@ -249,6 +240,7 @@ body {
 .dispositivos__titulo {
     font-size: 30px;
     color: var(--cor-de-fundo);
+    margin-top: 1em;
 }
 
 .titulo_pix {
@@ -272,6 +264,20 @@ body {
     width: 400px;
     align-items: center;
 }
+
+.imagem2 {
+    object-fit: contain; /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
+    border-radius: 10px; /* Borda arredondada opcional */
+    height: 400px;
+}
+
+.tamanho__grid2 {
+    height: 500px;
+}
+
+
+
 
 @media (max-width: 1080px) {
     .container_principal {

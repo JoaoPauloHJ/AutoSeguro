@@ -55,7 +55,7 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 50px; /* Ajuste conforme necessário */
-    width: 250px; /* Ajuste conforme necessário */
+    width: 260px; /* Ajuste conforme necessário */
     margin: auto; /* Centraliza horizontalmente */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -156,6 +156,8 @@ body {
     text-decoration: none;
     margin-bottom: 1em;
     transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .tamanho-grid-botao {
@@ -204,7 +206,7 @@ body {
 
 .descricao__texto {
     color: var(--cor-de-fundo);
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 700;
     margin-top: 1em;
     margin-bottom: 1px;
@@ -344,6 +346,11 @@ body {
     width: 400px;
     height: 550px;
 }
+
+
+
+
+
 
 @media (max-width: 1080px) {
     .container_principal {
