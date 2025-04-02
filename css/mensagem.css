@@ -95,7 +95,12 @@ legend {
     font-size: 12px;
     color: dodgerblue;
 }
-
+.container__botaoLogin {
+    width: 20%; 
+    top: 53%;
+    left: 50%;
+    font-size: 12px;
+}
 
 #data_nascimento {
     border: none;

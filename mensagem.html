@@ -39,7 +39,7 @@
                         <label for="mensagem" class="labelInput2">Mensagem</label>
                     </div>
                     <br>
-                    <button type="submit">Enviar</button>
+                    <button class="container__botaoLogin" type="button" onclick="mostrarAviso()">Enviar</button>
                     <br><br>
                 </fieldset>
             </form>
@@ -61,6 +61,9 @@
                     })
                     .catch(error => console.error("Erro:", error));
                 });
+                function mostrarAviso() {
+                alert("Sua mensagem foi enviada com sucesso!");
+                }
             </script>
 
             
