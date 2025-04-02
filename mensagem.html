@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cadastro</title>
+        <title>Mensagem</title>
         <style>
 
         </style>
@@ -45,11 +45,10 @@
             </form>
             <script>
                 document.getElementById("mensagemForm").addEventListener("submit", function(event) {
-                    event.preventDefault(); // Evita o reload da página
-                    
-                    var formData = new FormData(this);
-                    var url = "https://script.google.com/macros/s/AKfycbzGYvLdbSZwYEuWv3EX505CymIttd7tUI2pr59mYuVcY5KlvFv_4EXpvExp9IGt0M_i/exec"; 
-                    // Cole aqui a URL do Apps Script
+                    event.preventDefault(); // Evita que a página recarregue
+            
+                    var formData = new FormData(this); 
+                    var url = "https://script.google.com/macros/s/AKfycbwFU7ZUYHx7Gqp3AWg62H6DSTkIjG7-L82OFGiYZ2pk6UMLqwKA3ViFf1Tf7aaSr_RoKA/exec"; // Substitua pela sua URL
             
                     fetch(url, {
                         method: "POST",
@@ -63,6 +62,8 @@
                     .catch(error => console.error("Erro:", error));
                 });
             </script>
+
+            
             
         </div>
  
