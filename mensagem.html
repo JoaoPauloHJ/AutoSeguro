@@ -39,34 +39,48 @@
                         <label for="mensagem" class="labelInput2">Mensagem</label>
                     </div>
                     <br>
-                    <button class="container__botaoLogin" type="button" onclick="mostrarAviso()">Enviar</button>
+                    <button id="enviarBtn" class="container__botaoLogin" type="submit">Enviar</button>
                     <br><br>
                 </fieldset>
             </form>
+            
             <script>
-                document.getElementById("mensagemForm").addEventListener("submit", function(event) {
-                    event.preventDefault(); // Evita que a página recarregue
+            document.getElementById("mensagemForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita que a página recarregue
             
-                    var formData = new FormData(this); 
-                    var url = "https://script.google.com/macros/s/AKfycbwFU7ZUYHx7Gqp3AWg62H6DSTkIjG7-L82OFGiYZ2pk6UMLqwKA3ViFf1Tf7aaSr_RoKA/exec"; // Substitua pela sua URL
+                const enviarBtn = document.getElementById("enviarBtn");
+                enviarBtn.innerText = "Enviando...";
+                enviarBtn.disabled = true;
             
-                    fetch(url, {
-                        method: "POST",
-                        body: formData
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        alert("Mensagem enviada com sucesso!");
-                        document.getElementById("mensagemForm").reset();
-                    })
-                    .catch(error => console.error("Erro:", error));
+                const formData = {
+                    nome: document.getElementById("nome").value,
+                    email: document.getElementById("email").value,
+                    celular: document.getElementById("celular").value,
+                    mensagem: document.getElementById("mensagem").value
+                };
+            
+                const url = "https://script.google.com/macros/s/AKfycbwFU7ZUYHx7Gqp3AWg62H6DSTkIjG7-L82OFGiYZ2pk6UMLqwKA3ViFf1Tf7aaSr_RoKA/exec"; // Substitua pela sua URL
+            
+                fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Mensagem enviada com sucesso!");
+                    document.getElementById("mensagemForm").reset();
+                })
+                .catch(error => {
+                    console.error("Erro:", error);
+                    alert("Houve um erro ao enviar a mensagem.");
+                })
+                .finally(() => {
+                    enviarBtn.innerText = "Enviar";
+                    enviarBtn.disabled = false;
                 });
-                function mostrarAviso() {
-                alert("Sua mensagem foi enviada com sucesso!");
-                }
+            });
             </script>
-
-            
             
         </div>
  
