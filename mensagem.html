@@ -15,7 +15,7 @@
 
     <body>
         <div class="box">
-            <form action="">
+            <form id="mensagemForm">
                 <fieldset>
                     <legend><b>Digite sua Mensagem</b></legend>
                     <br>
@@ -35,14 +35,35 @@
                     </div>
                     <br><br>
                     <div class="inputBox2">
-                        <textarea name="endereco" id="endereco" class="inputUser2" required></textarea>
-                        <label for="endereco" class="labelInput2">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" class="inputUser2" required></textarea>
+                        <label for="mensagem" class="labelInput2">Mensagem</label>
                     </div>
                     <br>
-                    <input type="submit" name="submit" id="submit">
+                    <button type="submit">Enviar</button>
                     <br><br>
                 </fieldset>
             </form>
+            <script>
+                document.getElementById("mensagemForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Evita o reload da página
+                    
+                    var formData = new FormData(this);
+                    var url = "https://script.google.com/macros/s/AKfycbzGYvLdbSZwYEuWv3EX505CymIttd7tUI2pr59mYuVcY5KlvFv_4EXpvExp9IGt0M_i/exec"; 
+                    // Cole aqui a URL do Apps Script
+            
+                    fetch(url, {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert("Mensagem enviada com sucesso!");
+                        document.getElementById("mensagemForm").reset();
+                    })
+                    .catch(error => console.error("Erro:", error));
+                });
+            </script>
+            
         </div>
  
         <a href="index.html" class="container__botaoLogin">Voltar</a>
