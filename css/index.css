@@ -426,7 +426,7 @@ body {
     }
     .tamanho__grid {
         width: 300px;
-        height: 500px;
+        height: 350px;
     } 
     .container__botaoLogin {
         width: 30%; 
@@ -464,6 +464,9 @@ body {
     }
     .imagem_pix {
         width: 300px;
+    }
+    .imagem {
+        height: unset;
     }
     .dispositivos__titulo {
         font-size: 22px;
