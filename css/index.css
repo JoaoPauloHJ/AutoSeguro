@@ -70,7 +70,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-
 }
 
 .container__botaoLogin {
@@ -245,6 +244,7 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-bottom: 1em;
 }
 .dispositivos__titulo {
     font-size: 30px;
@@ -420,7 +420,7 @@ body {
         background-position:top;
         margin-top: 2em;
         height: 30vh;
-        margin-bottom: 4em;
+        margin-bottom: 6em;
     }
     .tamanho__grid {
         width: 300px;
@@ -481,35 +481,70 @@ body {
         gap: 0;
     }
 }
-@media (max-width: 360px) {
-    .container__botaoLogin,
+@media (max-width: 380px) {
+    .container_principal {
+        background-position:top;
+        margin-top: 2em;
+        height: 30vh;
+        margin-bottom: 11em;
+    }
+    .tamanho__grid {
+        width: 300px;
+        height: 350px;
+    } 
+    .container__botaoLogin {
+        width: 30%; 
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
     .container__botaoCadastro {
-        font-size: 10px;
-        padding: 0.5em;
-        width: 60%;
+        width: 30%;  
+        top: 53%;  
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
     }
-
+    .contador {
+        position: relative;
+        top: 12em;
+        width: 70%;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        left: 0;
+        transform: none; /* Remove o translateX */
+    }
     .descricao__texto {
-        font-size: 18px;
-    }
-
-    .imagem_pix,
-    .imagem {
-        width: 90%;
-        height: auto;
-    }
-
-    .lista__item {
         font-size: 24px;
+    }
+    .secundario__imagem.imagem {
+        width: 60vw;
+    }
+    .container__secundario {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container__botao {
+        margin-top: 1em;
+    }
+    .imagem_pix {
+        width: 300px;
+    }
+    .imagem {
+        height: unset;
+    }
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+     .links {
+        font-size: 15px; /* Fonte ainda menor */
+        border-radius: 3px; /* Arredonda menos os cantos */
+        border-bottom: solid 1px black; /* Diminui a espessura da borda */
     }
 
     .container_links {
-        gap: 0.5em;
-    }
-
-    .links {
-        font-size: 12px;
-        padding: 0.5em;
+        display: grid;
+        gap: 0;
     }
 }
 
