@@ -277,9 +277,9 @@ body {
 .tamanho__grid2 {
     height: 500px;
 }
-
-
-
+.tamanho__grid3 {
+    height: 300px;
+}
 
 @media (max-width: 1080px) {
     .container_principal {
