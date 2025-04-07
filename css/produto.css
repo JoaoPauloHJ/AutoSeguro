@@ -355,6 +355,7 @@ body {
 
     .dispositivos__titulo {
         font-size: 20px;
+        margin-top: 2em;
     }
 
     .links {
@@ -401,7 +402,7 @@ body {
     }
 
     .links {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
