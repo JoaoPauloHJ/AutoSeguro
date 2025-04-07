@@ -191,7 +191,6 @@ body {
     text-align: center;
     justify-items: center;
     grid-template-columns:auto auto auto;
-    margin-bottom: 2em;
 }
 
 
@@ -486,7 +485,7 @@ body {
         background-position:top;
         margin-top: 2em;
         height: 30vh;
-        margin-bottom: 11em;
+        margin-bottom: 10em;
     }
     .tamanho__grid {
         width: 300px;
