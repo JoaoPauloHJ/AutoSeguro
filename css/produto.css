@@ -277,8 +277,135 @@ body {
 .tamanho__grid3 {
     height: 300px;
 }
+@media (max-width: 768px) {
+    .container_principal {
+        margin-top: 1em;
+        height: 80vh;
+        background-position: center;
+    }
 
-@media (max-width: 1080px) {
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        top: 10%;
+        left: 75%;
+        font-size: 14px;
+        width: 6em;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .container__secundario {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+
+    .imagem_pix {
+        width: 320px;
+    }
+
+    .dispositivos__titulo {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container_principal {
+        height: 50vh;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        background-position: top;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        width: 40%;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+    }
+
+    .descricao__texto {
+        font-size: 20px;
+    }
+
+    .container__secundario {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+        width: 50%;
+        font-size: 18px;
+    }
+
+    .imagem_pix,
+    .imagem,
+    .imagem2 {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .dispositivos__titulo {
+        font-size: 20px;
+    }
+
+    .links {
+        font-size: 18px;
+        padding: 0.5em;
+    }
+
+    .container_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .container_principal {
+        height: 40vh;
+        margin-top: 1.5em;
+        background-position: top;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        font-size: 12px;
+        width: 45%;
+        top: 50%;
+    }
+
+    .descricao__texto {
+        font-size: 18px;
+    }
+
+    .container__botao {
+        font-size: 16px;
+    }
+
+    .imagem_pix {
+        max-width: 250px;
+    }
+
+    .dispositivos__titulo {
+        font-size: 18px;
+    }
+
+    .links {
+        font-size: 13px;
+    }
+}
+
+/* @media (max-width: 1080px) {
     .container_principal {
         margin-top: 2em;
         height: 100vh;
@@ -347,7 +474,7 @@ body {
 
 }
 
-/* Para telas menores que 480px (Ex: Celulares pequenos) */
+
 @media (max-width: 480px) {
     .container_principal {
         background-position:top;
@@ -387,7 +514,7 @@ body {
         grid-template-columns: repeat(1, 1fr);
         display: flex;
         flex-direction: column;
-        gap: 2em; /* espaço entre as divs */
+        gap: 2em; 
     }
     
     .container__botao {
@@ -401,16 +528,16 @@ body {
     }
 
      .links {
-        font-size: 15px; /* Fonte ainda menor */
-        border-radius: 3px; /* Arredonda menos os cantos */
-        border-bottom: solid 1px black; /* Diminui a espessura da borda */
+        font-size: 15px; 
+        border-radius: 3px;  
+        border-bottom: solid 1px black; 
     }
 
     .container_links {
         display: grid;
         gap: 0;
     }
-}
+} */
 
 
 
