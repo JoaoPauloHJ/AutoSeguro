@@ -443,8 +443,12 @@ body {
         font-size: 12px;
     }
     .contador {
-       top: 10em;
-       width: 250px;
+        position: relative;
+        top: 12em;
+        width: 70%;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        left: 0;
+        transform: none; /* Remove o translateX */
     }
     .descricao__texto {
         font-size: 24px;
