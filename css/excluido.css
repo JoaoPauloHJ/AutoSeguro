@@ -13,7 +13,7 @@
 
 body {
     background-color: var(--cor-de-fundo);
-    color: var(--branco-principal);
+    color: var(--cor-de-fundo);
     background: linear-gradient(to bottom, #e9f5f8, #e9f5f8, #e9f5f8);
     font-family: var(--fonte-principal);
     font-size: 16px;
@@ -57,6 +57,10 @@ body {
     z-index: 10;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
 .botao-modal {
     background-color: var(--botao-cor-nova);
     color: white;
@@ -323,7 +327,6 @@ body {
     height: 36px;
     text-decoration: none;
     transition: all 0.3s ease;
-    
 }
 
 /* .descricao__texto:hover {
@@ -463,44 +466,53 @@ body {
 }
 
 
-/* Estilos responsivos */
-
-/* Telas até 1080px */
 @media (max-width: 1080px) {
     .container_principal {
         margin-top: 2em;
         height: 100vh;
     }
 
-    .container__botaoLogin,
+    .container__botaoLogin {
+        padding: 1em;
+        font-size: 15px;
+        font-weight: 400;
+        width: 6em;
+
+    }
     .container__botaoCadastro {
         padding: 1em;
         font-size: 15px;
         font-weight: 400;
         width: 6em;
     }
-
     .descricao__texto {
         font-size: 24px;
     }
-
+    
     .container__secundario {
-        grid-template-columns: auto auto;
+        grid-template-columns:auto auto;
     }
-
     .container__botao {
         margin-top: 1em;
     }
+
+
 }
 
-/* Telas até 820px */
 @media (max-width: 820px) {
     .container_principal {
-        margin-top: 0;
+        margin-top: 0px;
         height: 80vh;
     }
 
-    .container__botaoLogin,
+    .container__botaoLogin {
+        top: 8em;
+        padding: 1em;
+        font-size: 15px;
+        font-weight: 400;
+        width: 6em;
+
+    }
     .container__botaoCadastro {
         top: 8em;
         padding: 1em;
@@ -508,83 +520,78 @@ body {
         font-weight: 400;
         width: 6em;
     }
-
     .descricao__texto {
         font-size: 24px;
     }
-
+    
     .container__secundario {
-        grid-template-columns: auto auto;
+        grid-template-columns:auto auto;
     }
-
     .container__botao {
         margin-top: 1em;
     }
 }
 
-/* Telas até 480px */
+/* Para telas menores que 480px (Ex: Celulares pequenos) */
 @media (max-width: 480px) {
     .container_principal {
-        background-position: top;
-        margin: 2em 0 6em;
+        background-position:top;
+        margin-top: 2em;
         height: 30vh;
+        margin-bottom: 6em;
     }
-
     .tamanho__grid {
         width: 300px;
         height: 350px;
-    }
-
-    .container__botaoLogin,
-    .container__botaoCadastro {
-        width: 30%;
+    } 
+    .container__botaoLogin {
+        width: 30%; 
         top: 53%;
         left: 50%;
         transform: translate(-50%);
         font-size: 12px;
     }
-
+    .container__botaoCadastro {
+        width: 30%;  
+        top: 53%;  
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
     .contador {
         position: relative;
         top: 12em;
         width: 70%;
-        margin: 0 auto;
+        margin: 0 auto; /* Centraliza horizontalmente */
         left: 0;
-        transform: none;
+        transform: none; /* Remove o translateX */
     }
-
     .descricao__texto {
         font-size: 24px;
     }
-
     .secundario__imagem.imagem {
         width: 60vw;
     }
-
     .container__secundario {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
-
     .container__botao {
         margin-top: 1em;
     }
-
     .imagem_pix {
         width: 300px;
     }
-
     .imagem {
         height: unset;
     }
-
     .dispositivos__titulo {
         font-size: 22px;
     }
 
-    .links {
-        font-size: 15px;
-        border-radius: 3px;
-        border-bottom: 1px solid black;
+     .links {
+        font-size: 15px; /* Fonte ainda menor */
+        border-radius: 3px; /* Arredonda menos os cantos */
+        border-bottom: solid 1px black; /* Diminui a espessura da borda */
     }
 
     .container_links {
@@ -592,61 +599,65 @@ body {
         gap: 0;
     }
 }
-
-/* Telas até 380px */
 @media (max-width: 380px) {
     .container_principal {
-        background-position: top;
-        margin: 2em 0 10em;
+        background-position:top;
+        margin-top: 2em;
         height: 30vh;
+        margin-bottom: 10em;
     }
-
     .tamanho__grid {
         width: 300px;
-        height: 450px;
+        height: 350px;
+    } 
+    .container__botaoLogin {
+        width: 30%; 
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
     }
-
+    .container__botaoCadastro {
+        width: 30%;  
+        top: 53%;  
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
     .contador {
         position: relative;
         top: 12em;
+        width: 70%;
+        margin: 0 auto; /* Centraliza horizontalmente */
         left: 0;
-        margin: auto;
-        font-size: 20px;
-        transform: none;
+        transform: none; /* Remove o translateX */
     }
-
     .descricao__texto {
         font-size: 24px;
     }
-
     .secundario__imagem.imagem {
         width: 60vw;
     }
-
     .container__secundario {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
-
     .container__botao {
         margin-top: 1em;
     }
-
     .imagem_pix {
         width: 300px;
     }
-
     .imagem {
         height: unset;
     }
-
     .dispositivos__titulo {
         font-size: 22px;
     }
 
-    .links {
-        font-size: 15px;
-        border-radius: 3px;
-        border-bottom: 1px solid black;
+     .links {
+        font-size: 15px; /* Fonte ainda menor */
+        border-radius: 3px; /* Arredonda menos os cantos */
+        border-bottom: solid 1px black; /* Diminui a espessura da borda */
     }
 
     .container_links {
@@ -654,7 +665,6 @@ body {
         gap: 0;
     }
 }
-
 
 
 

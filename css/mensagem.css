@@ -184,7 +184,6 @@ legend {
 @media only screen and (max-width: 600px){
     .box {
         margin-top: 2em;
-        width: 80%;
+        width: 90%;
     }
-    
 }
