@@ -34,6 +34,7 @@ legend {
     text-align: center;
     background-color: #00ccfe;
     border-radius: 8px;
+    font-size: 22px;
 }
 .inputBox {
     position: relative;
@@ -123,23 +124,47 @@ legend {
     background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
 }
 
-.container__botaoLogin {
+.container__botaoEnviar {
+
+        background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
+        width: 300px; /* ou 50%, ou o valor que quiser */
+        margin: auto; /* centraliza horizontalmente */
+        display: block; /* necessário pra o margin: auto funcionar em alguns casos */
+        border: none;
+        padding: 15px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+
+.container__botaoEnviar:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.1); /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transition: transform 0.3s ease; /* duração e suavidade */
+}
+
+.container__botaoVoltar {
     background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(20, 173, 220));
     width: 100%;
     border: none;
     padding: 15px;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 10px;
     text-decoration: none;
-}   
-
-.container__botaoLogin:hover {
+}  
+.container__botaoVoltar:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
     transform: scale(1.2); /* Aumenta o botão */
     box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transition: transform 0.5s ease; /* duração e suavidade */
 }
 
 

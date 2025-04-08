@@ -285,8 +285,6 @@ body {
     to { transform: translateY(0); opacity: 1 }
 }
 
-
-
 @media (max-width: 768px) {
     .container_principal {
         margin-top: 1em;

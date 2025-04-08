@@ -44,6 +44,122 @@ body {
 }
 
 .contador {
+    position: absolute;
+    top: 100px; /* Distância do topo */
+    right: 100px; /* Distância da direita */
+    background-color: #A9C8B8;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.botao-modal {
+    background-color: var(--botao-cor-nova);
+    color: white;
+    padding: 15px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1em auto;
+    display: block;
+    margin-top: 25px;
+}
+
+.botao-modal:hover {
+    background-color: var(--botao-efeito-colorido);
+    transform: scale(1.05);
+    color: var(--cor-de-fundo);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-conteudo {
+    background-color: var(--branco--gelo);
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.modal-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.botao-modal-opcao {
+    padding: 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--botao-azul);
+    font-size: 18px;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+.botao-modal-opcao:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.05);
+}
+
+/* Estilo adicional específico para WhatsApp */
+.botao-whatsapp {
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: black;
+}
+.botao-whatsapp:hover {
+    background-color: #1ebc5b;
+}
+
+.modal-fechar {
+    background: transparent;
+    border: none;
+    margin-top: 1em;
+    font-size: 16px;
+    color: var(--cor-de-fundo);
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
+
+
+/* .contador {
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
@@ -51,18 +167,18 @@ body {
     padding: 10px 20px;
     border-radius: 8px;
     text-align: center;
-    display: flex; /* Habilita o flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 50px; /* Ajuste conforme necessário */
-    width: 260px; /* Ajuste conforme necessário */
-    margin: auto; /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center; /
+    align-items: center; 
+    height: 50px;
+    width: 260px; 
+    margin: auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    bottom: -60px; /* Distância do rodapé */
+    bottom: -60px; 
     left: 45%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-}
+    transform: translateX(-50%); 
+} */
 
 .container_principal {
     background-image: url('/img/chapanela1920.png');
@@ -250,7 +366,10 @@ body {
     color: var(--cor-de-fundo);
 }
 
-
+.container__valor {
+    font-size: 25px;
+    color: var(--cor-de-fundo);
+}
 
 .titulo_pix {
     font-size: 20px;
@@ -343,7 +462,7 @@ body {
 
 .tamanho__grid {
     width: 400px;
-    height: 550px;
+    height: 600px;
 }
 
 
