@@ -138,8 +138,7 @@ produtos.forEach((produto, index) => {
 
         <div class="modal-overlay" id="modal-${index}" style="display: none;">
           <div class="modal-conteudo">
-            <h2>Como você deseja presentear?</h2>
-            <p>Escolha uma opção:</p>
+            <p class="descricao__textoP">Escolha uma opção:</p>
             <div class="modal-botoes">
               <a href="${produto.pagamento}" target="_blank" class="botao-modal-opcao">💳 Pagar agora</a>
               <a href="${produto.whatsapp}" target="_blank" class="botao-modal-opcao botao-whatsapp">📱 Reservar via WhatsApp e pagar depois!</a>
