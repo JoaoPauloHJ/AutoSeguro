@@ -378,8 +378,11 @@ body {
 }
 
 .container__valor {
-    font-size: 25px;
-    color: var(--cor-de-fundo);
+    font-size: 28px;            /* Um pouco maior para dar destaque */
+    color: #2c3e50;             /* Um tom escuro elegante */
+    font-weight: bold;         /* Peso mais forte para destacar */
+    margin-top: 10px;
+    display: block;
 }
 
 .titulo_pix {
