@@ -83,13 +83,16 @@ body {
 }
 
 .container__secundario {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center;     /* Centraliza verticalmente (se houver altura definida) */
-    gap: 20em;                /* Espaço entre os blocos */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     padding: 2em;
     text-align: center;
+}
+
+.container__aviso2 {
+    font-size: 12px;
+    color: var(--cor-de-fundo)
 }
 
 .descricao__titulo {
@@ -155,19 +158,96 @@ body {
     height: 400px;
 }
 
-/* .tamanho__grid2 {
+.tamanho__grid {
     height: 500px;
 }
 .tamanho__grid3 {
     height: 350px;
-}  */
-
-
-.tamanho__grid2,
-.tamanho__grid3 {
-    flex: 1;
-    max-width: 480px; /* tamanho limite de cada lado */
+}  
+.botao-modal {
+    background-color: var(--botao-cor-nova);
+    color: white;
+    padding: 1em 2em;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1em auto;
+    display: block;
 }
+
+.botao-modal:hover {
+    background-color: var(--botao-efeito-colorido);
+    transform: scale(1.05);
+    color: var(--cor-de-fundo);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-conteudo {
+    background-color: var(--branco--gelo);
+    padding: 2em;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    animation: slideDown 0.4s ease;
+}
+
+.modal-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.botao-modal-opcao {
+    padding: 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--botao-azul);
+    font-size: 18px;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+.botao-modal-opcao:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.05);
+}
+
+.modal-fechar {
+    background: transparent;
+    border: none;
+    margin-top: 1em;
+    font-size: 16px;
+    color: var(--cor-de-fundo);
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+
 
 
 @media (max-width: 768px) {
