@@ -331,23 +331,19 @@ body {
         background-position: top;
     }
 
-    .container__botaoLogin,
-    .container__botaoCadastro {
-        width: 40%;
-        top: 55%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 13px;
-    }
-
     .descricao__texto {
-        font-size: 20px;
+        font-size: 25px;
+    }
+    .container__aviso{
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
     }
 
     .container__secundario {
         display: flex;
         flex-direction: column;
-        gap: 2.0em;
+
     }
 
     .container__botao {
@@ -356,11 +352,8 @@ body {
         font-size: 18px;
     }
 
-    .imagem_pix,
-    .imagem,
-    .imagem2 {
+    .imagem {
         width: 100%;
-        max-width: 400px;
     }
 
     .dispositivos__titulo {
@@ -369,7 +362,7 @@ body {
     }
 
     .links {
-        font-size: 18px;
+        font-size: 20px;
         padding: 0.5em;
     }
 
@@ -412,7 +405,7 @@ body {
     }
 
     .links {
-        font-size: 16px;
+        font-size: 20px;
     }
     .imagem2 {
         object-fit: contain; /* Mantém a proporção da imagem */
