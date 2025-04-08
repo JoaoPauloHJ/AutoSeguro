@@ -532,7 +532,7 @@ body {
 
     .tamanho__grid {
         width: 300px;
-        height: 350px;
+        height: 500px;
     }
 
     .container__botaoLogin,
@@ -546,11 +546,12 @@ body {
 
     .contador {
         position: relative;
-        top: 12em;
-        width: 70%;
+        top: 13em;
+        width: 60%;
         margin: 0 auto;
         left: 0;
         transform: none;
+        font-size: 20px;
     }
 
     .descricao__texto {
