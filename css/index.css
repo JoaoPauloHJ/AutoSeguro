@@ -615,8 +615,8 @@ body {
 @media (max-width: 380px) {
     .container_principal {
         background-position: top;
-        margin: 2em 0 10em;
-        height: 30vh;
+        margin: 2em 0 6em;
+        height: 32vh;
     }
 
     .tamanho__grid {
@@ -629,7 +629,7 @@ body {
         top: 12em;
         left: 0;
         margin: auto;
-        font-size: 20px;
+        font-size: 18px;
         transform: none;
     }
 
