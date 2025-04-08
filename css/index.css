@@ -213,11 +213,11 @@ body {
     transition: all 0.3s ease;
 }
 
-.descricao__texto:hover {
+/* .descricao__texto:hover {
     color: var(--cor-de-fundo);
     transition: all 0.3s ease;
-    transform: scale(1.1); /* Aumenta o botão */
-}
+    transform: scale(1.1); /* Aumenta o botão 
+} */
 
 .descricao__texto2 {
     color: var(--cinza-secundario);
