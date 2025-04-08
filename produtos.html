@@ -26,7 +26,9 @@
 
             <h2 class="descricao__texto" id="produto-nome"></h2>
 
-            <p class="container__aviso2">Clique no botão abaixo para presentear!</p>
+            <p class="container__aviso">Clique no botão abaixo para presentear!</p>
+            <br>
+            <h2 class="container__valor">R$ 99,00</h2>
             <!-- Botão que abre o modal -->
             <button class="botao-modal" onclick="abrirModal()">🎁 Quero Presentear</button>
 
@@ -36,18 +38,16 @@
                     <h2>Como você deseja presentear?</h2>
                     <p>Escolha uma opção:</p>
                     <div class="modal-botoes">
-                        <a href="https://checkout.nubank.com.br/DiNnlzaRiG92botq" target="_blank"
-                            class="botao-modal-opcao">💳 Pagar agora</a>
-                        <a id="botao-presentear" href="produto.link" target="_blank"
-                            class="botao-modal-opcao botao-whatsapp">📱 Reservar via WhatsApp e pagar depois!</a>
+                    <a href="https://checkout.nubank.com.br/DiNnlzaRiG92botq" target="_blank" class="botao-modal-opcao">💳 Pagar agora</a>
+                    <a id="botao-presentear" href="produto.link" target="_blank" class="botao-modal-opcao botao-whatsapp">📱 Reservar via WhatsApp e pagar depois!</a>
                     </div>
                     <button class="modal-fechar" onclick="fecharModal()">Fechar</button>
 
                 </div>
+            </div>
+    </section>
                 <!-- <a id="botao-presentear" href = produto.link target="_blank"
                 class="container__botao secundario__botao">Presentear!</a>  -->
-
-            </div>
             <!-- <div class="tamanho__grid3">
                 
                 <h2 class="dispositivos__titulo">Formas de Presentear: <br><br> Pix, cartão de credito, Cartão de Débito.</h2>
@@ -57,9 +57,6 @@
                 <a target="_blank" href="https://checkout.nubank.com.br/DiNnlzaRiG92botq">
                 <img src="img/pagamento.png" class="imagem_pix"></a>
             </div> -->
-
-
-    </section>
     <script>
         function abrirModal() {
             document.getElementById("modal").style.display = "flex";
@@ -143,11 +140,11 @@
                 imgElement.alt = produto.nome;
                 document.getElementById("botao-presentear").href = produto.link;
             } else {
-                document.querySelector(".tamanho__grid2").innerHTML = "<h1>Produto não encontrado</h1>";
+                document.querySelector(".tamanho__grid").innerHTML = "<h1>Produto não encontrado</h1>";
             }
             if (nomeProduto && produtos[nomeProduto]) {
                 const linkWhatsapp = produtos[nomeProduto].link;
-                document.getElementById("link-reserva").href = linkWhatsapp;
+                document.getElementById("botao-presentear").href = linkWhatsapp;
             }
         });
     </script>
