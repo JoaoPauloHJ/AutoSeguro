@@ -617,13 +617,14 @@ body {
 }
 
 
+
 /* Estilos responsivos */
 
-/* Telas até 1080px */
+
 @media (max-width: 1080px) {
     .container_principal {
         margin-top: 2em;
-        height: 100vh;
+        height: 65vh;
     }
 
     .container__botaoLogin,
@@ -647,11 +648,10 @@ body {
     }
 }
 
-/* Telas até 820px */
-@media (max-width: 820px) {
+@media (max-width: 821px) {
     .container_principal {
         margin-top: 0;
-        height: 80vh;
+        height: 60vh;
     }
 
     .container__botaoLogin,
@@ -675,12 +675,10 @@ body {
         margin-top: 1em;
     }
 }
-
-/* Telas até 480px */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .container_principal {
         background-position: top;
-        margin: 2em 0 6em;
+        margin: 2em 0 0em;
         height: 30vh;
     }
 
@@ -700,8 +698,8 @@ body {
 
     .contador {
         position: relative;
-        top: 13em;
-        width: 60%;
+        top: 1em;
+        width: 70%;
         margin: 0 auto;
         left: 0;
         transform: none;
@@ -744,11 +742,82 @@ body {
 
     .container_links {
         display: grid;
-        gap: 0;
+
     }
 }
 
-/* Telas até 380px */
+@media (max-width: 480px) {
+    .container_principal {
+        background-position: top;
+        margin: 2em 0 0em;
+        height: 30vh;
+    }
+
+    .tamanho__grid {
+        width: 300px;
+        height: 500px;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        width: 30%;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
+
+    .contador {
+        position: relative;
+        top: 1em;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        transform: none;
+        font-size: 20px;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .secundario__imagem.imagem {
+        width: 60vw;
+    }
+
+    .container__secundario {
+        grid-template-columns: 1fr;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+
+    .imagem_pix {
+        width: 300px;
+    }
+
+    .imagem {
+        height: unset;
+    }
+
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+    .links {
+        font-size: 15px;
+        border-radius: 3px;
+        border-bottom: 1px solid black;
+    }
+
+    .container_links {
+        display: grid;
+
+    }
+}
+
+
 @media (max-width: 380px) {
     .container_principal {
         background-position: top;
@@ -807,4 +876,4 @@ body {
     .container_links {
         display: grid;
     }
-}
+} 
