@@ -24,6 +24,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container_links {
     display: flex;
     flex-direction: column;
@@ -75,6 +76,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
 /* teste 1.links {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
@@ -217,9 +219,11 @@ body {
 
 /* Estilo adicional específico para WhatsApp */
 .botao-whatsapp {
-    background-color: #25D366; /* Cor do WhatsApp */
+    background-color: #25D366;
+    /* Cor do WhatsApp */
     color: black;
 }
+
 .botao-whatsapp:hover {
     background-color: #1ebc5b;
 }
@@ -238,13 +242,25 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0 }
-    to { transform: translateY(0); opacity: 1 }
+    from {
+        transform: translateY(-30px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
 }
 
 
@@ -280,8 +296,10 @@ body {
 
 .container__botaoLogin {
     position: absolute;
-    top: 10%; /* 20% a partir do topo do contêiner */
-    left: 80%; /* 30% a partir da esquerda */
+    top: 10%;
+    /* 20% a partir do topo do contêiner */
+    left: 80%;
+    /* 30% a partir da esquerda */
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     padding: 1em;
@@ -293,10 +311,13 @@ body {
     width: 6em;
     text-align: center;
 }
+
 .container__botaoCadastro {
     position: absolute;
-    top: 10%; /* 20% a partir do topo do contêiner */
-    left: 80%; /* 30% a partir da esquerda */
+    top: 10%;
+    /* 20% a partir do topo do contêiner */
+    left: 80%;
+    /* 30% a partir da esquerda */
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     padding: 1em;
@@ -313,15 +334,19 @@ body {
 .container__botaoLogin:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.1); /* Aumenta o botão */
-    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transform: scale(1.1);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
 }
 
 .container__botaoCadastro:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.0); /* Aumenta o botão */
-    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transform: scale(1.0);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
 }
 
 .container__botaoP_S {
@@ -333,23 +358,30 @@ body {
     text-decoration: none;
     margin-bottom: 1em;
     transition: all 0.3s ease;
-    width: 16em; /* Largura do botão */
-    height: 1em; /* Altura do botão */
+    width: 16em;
+    /* Largura do botão */
+    height: 1em;
+    /* Altura do botão */
     font-size: 20px;
     font-weight: 400;
 }
+
 .container__botaoP_S:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.2); /* Aumenta o botão */
-    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transform: scale(1.2);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
 }
 
 .container__botaoP:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.2); /* Aumenta o botão */
-    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transform: scale(1.2);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
 }
 
 .container__botao {
@@ -372,8 +404,10 @@ body {
 .container__botao:hover {
     background-color: var(--botao-efeito-colorido);
     color: var(--cor-de-fundo);
-    transform: scale(1.3); /* Aumenta o botão */
-    box-shadow: 0 4px 15px rgb(5, 67, 238); /* Adiciona sombra */
+    transform: scale(1.3);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
 }
 
 .botao_secundario {
@@ -396,7 +430,7 @@ body {
     display: grid;
     text-align: center;
     justify-items: center;
-    grid-template-columns:auto auto auto;
+    grid-template-columns: auto auto auto;
 }
 
 
@@ -416,8 +450,9 @@ body {
     margin-bottom: 1px;
     height: 36px;
     text-decoration: none;
-    transition: all 0.3s ease;   
+    transition: all 0.3s ease;
 }
+
 .descricao__textoP {
     color: var(--cor-de-fundo);
     font-size: 30px;
@@ -443,7 +478,7 @@ body {
     margin-bottom: 10px;
     height: 4em;
     text-decoration: none;
- 
+
 }
 
 .secundario__botao {
@@ -454,6 +489,7 @@ body {
 .container__descricao {
     padding: 2em;
 }
+
 .dispositivos {
     display: flex;
     align-items: center;
@@ -461,15 +497,19 @@ body {
     flex-direction: column;
     margin-bottom: 1em;
 }
+
 .dispositivos__titulo {
     font-size: 30px;
     color: var(--cor-de-fundo);
 }
 
 .container__valor {
-    font-size: 28px;            /* Um pouco maior para dar destaque */
-    color: #2c3e50;             /* Um tom escuro elegante */
-    font-weight: bold;         /* Peso mais forte para destacar */
+    font-size: 28px;
+    /* Um pouco maior para dar destaque */
+    color: #2c3e50;
+    /* Um tom escuro elegante */
+    font-weight: bold;
+    /* Peso mais forte para destacar */
     margin-top: 10px;
     display: block;
 }
@@ -504,7 +544,7 @@ body {
     list-style-type: none;
     margin: 1em;
     margin-bottom: 2em;
-    gap: 3em;   
+    gap: 3em;
 }
 
 .lista__link a {
@@ -537,14 +577,18 @@ body {
 }
 
 .imagem_pix {
-    object-fit: cover; /* Mantém a proporção da imagem */
-    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
-    border-radius: 10px; /* Borda arredondada opcional */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+    border-radius: 10px;
+    /* Borda arredondada opcional */
     width: 400px;
 }
 
 .imagem_pix:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
 }
 
 .imagemF {
@@ -552,15 +596,19 @@ body {
 }
 
 .imagem {
-    object-fit: contain; /* Mantém a proporção da imagem */
-    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transição suave */
-    border-radius: 10px; /* Borda arredondada opcional */
+    object-fit: contain;
+    /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+    border-radius: 10px;
+    /* Borda arredondada opcional */
     width: 400px;
     height: 350px;
 }
 
 .imagem:hover {
-    transform: scale(1.2); /* Aumenta a imagem em 10% */
+    transform: scale(1.2);
+    /* Aumenta a imagem em 10% */
 }
 
 .tamanho__grid {
@@ -704,7 +752,7 @@ body {
 @media (max-width: 380px) {
     .container_principal {
         background-position: top;
-        margin: 2em 0 6em;
+        margin: 2em 0 0em;
         height: 32vh;
     }
 
@@ -715,7 +763,7 @@ body {
 
     .contador {
         position: relative;
-        top: 12em;
+        top: 1em;
         left: 0;
         margin: auto;
         font-size: 18px;
@@ -758,19 +806,5 @@ body {
 
     .container_links {
         display: grid;
-        gap: 0;
     }
 }
-
-
-
-
-
-
-
-
-    
-
-
-
-
