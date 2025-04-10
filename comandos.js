@@ -118,6 +118,30 @@ const produtos = [
         pagamento: "https://checkout.nubank.com.br/DiNnlzaRiG92botq",
         whatsapp: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Kit%20Porta%20Tempero).",
 
+    },
+    {
+        nome: "Jogo De Facas",
+        valor: "R$ 99,00",
+        imagem: "../img/facas.png",
+        pagamento: "https://checkout.nubank.com.br/DiNnlzaRiG92botq",
+        whatsapp: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Jogo%20De%20Facas).",
+
+    },
+    {
+        nome: "Faqueiro Buzios",
+        valor: "R$ 89,90",
+        imagem: "../img/faqueirobuzios.png",
+        pagamento: "https://checkout.nubank.com.br/DiNnlzaRiG92botq",
+        whatsapp: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Faqueiro%2024%20Peças).",
+
+    },
+    {
+        nome: "Kit Pote Hermeticos",
+        valor: "R$ 105,00",
+        imagem: "../img/poteshermeticos.png",
+        pagamento: "https://checkout.nubank.com.br/DiNnlzaRiG92botq",
+        whatsapp: "https://wa.me/5534996920066/?text=Ol%C3%A1,%20Gostaria%20de%20reservar%20esse%20presente%20(Kit%20Potes%20Hermeticos).",
+
     }
     // Adicione novos produtos aqui facilmente
 ];
