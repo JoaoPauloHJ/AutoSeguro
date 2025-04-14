@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Veículos - AutoMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">AutoSeguro</a>
+            <nav>
+                <a href="login.html">Entrar</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h1>Veículos Disponíveis</h1>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar veículos..." class="search-input">
+            <select class="search-select">
+                <option value="">Todas as categorias</option>
+                <option value="carro">Carros</option>
+                <option value="moto">Motos</option>
+                <option value="caminhao">Caminhões</option>
+            </select>
+            <button class="action-button buy-button">Buscar</button>
+        </div>
+        
+        <div class="vehicle-list">
+            <!-- Exemplo de card de veículo -->
+            <div class="vehicle-card">
+                <div class="vehicle-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                <div class="vehicle-info">
+                    <h3>Fiat Argo Drive 1.3 2020</h3>
+                    <div class="vehicle-price">R$ 62.900</div>
+                    <div class="vehicle-details">
+                        <p>30.000 km | 1.3 Flex | Manual</p>
+                        <p>Belo Horizonte - MG</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
+            
+            <!-- Mais veículos... -->
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AutoSeguro - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,780 @@
+:root {
+    --cor-principal: #0f0f0f;         /* Fundo principal bem escuro */
+    --cor-secundaria: #1f1f1f;        /* Seções e cards */
+    --cor-destaque: #f43f5e;          /* Rosa avermelhado (botões ou ações) */
+    --cor-acento: #3b82f6;            /* Azul moderno */
+    --cor-de-suporte: #9ca3af;        /* Texto secundário */
+    --cor-de-sucesso: #10b981;        /* Verde para mensagens positivas */
+    --cor-de-fundo: #ffffff;          /* Texto branco */
+    --cor-hover-botao: #2563eb;       /* Azul hover */
+
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to bottom right, var(--cor-principal), var(--cor-secundaria), var(--cor-acento));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.links {
+    background-color: rgba(255, 255, 255, 0.9);    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1em 2em;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 200px;
+}
+
+.links:hover {
+    background-color: #A9C8B8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botao-modal {
+    background-color: var(--botao-cor-nova);
+    color: white;
+    padding: 15px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1em auto;
+    display: block;
+    margin-top: 25px;
+}
+
+.botao-modal:hover {
+    background-color: var(--botao-efeito-colorido);
+    transform: scale(1.05);
+    color: var(--cor-de-fundo);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-conteudo {
+    background-color: var(--branco--gelo);
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.modal-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.botao-modal-opcao {
+    padding: 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--botao-azul);
+    font-size: 18px;
+    transition: 0.3s ease, transform 0.2s ease;
+}
+
+
+.botao-modal-opcao:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.05);
+}
+
+/* Estilo adicional específico para WhatsApp */
+.botao-whatsapp {
+    background-color: #25D366;
+    /* Cor do WhatsApp */
+    color: black;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebc5b;
+}
+
+.modal-fechar {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    margin-top: 1.5em;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+
+.container_principal {
+    background-image: url('/img/autoseuro.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+}
+
+.container__botaoLogin {
+    position: absolute;
+    top: 10%;
+    /* 20% a partir do topo do contêiner */
+    left: 80%;
+    /* 30% a partir da esquerda */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 400;
+    width: 6em;
+    text-align: center;
+}
+
+.container__botaoCadastro {
+    position: absolute;
+    top: 10%;
+    /* 20% a partir do topo do contêiner */
+    left: 80%;
+    /* 30% a partir da esquerda */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    margin-top: 4em;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    font-weight: 400;
+    width: 6em;
+    text-align: center;
+}
+
+.container__botaoLogin:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.1);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
+}
+
+.container__botaoCadastro:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.0);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
+}
+
+.container__botaoP_S {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-de-fundo);
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+    width: 16em;
+    /* Largura do botão */
+    height: 1em;
+    /* Altura do botão */
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.container__botaoP_S:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.2);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
+}
+
+.container__botaoP:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.2);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
+}
+
+.container__botao {
+    background-color: var(--botao-cor-nova);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.tamanho-grid-botao {
+    border: solid red;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-efeito-colorido);
+    color: var(--cor-de-fundo);
+    transform: scale(1.3);
+    /* Aumenta o botão */
+    box-shadow: 0 4px 15px rgb(5, 67, 238);
+    /* Adiciona sombra */
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cor-de-fundo);
+}
+
+.container__aviso2 {
+    font-size: 12px;
+    color: var(--cor-de-fundo)
+}
+
+
+.container__secundario {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cor-de-fundo);
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 1px;
+    height: 36px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.descricao__textoP {
+    color: var(--cor-de-fundo);
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 1px;
+    height: 36px;
+    text-decoration: none;
+}
+
+
+/* .descricao__texto:hover {
+    color: var(--cor-de-fundo);
+    transition: all 0.3s ease;
+    transform: scale(1.1); /* Aumenta o botão 
+} */
+
+.descricao__texto2 {
+    color: var(--cinza-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 4em;
+    text-decoration: none;
+
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.dispositivos__titulo {
+    font-size: 30px;
+    color: var(--cor-de-fundo);
+}
+
+.container__valor {
+    font-size: 28px;
+    /* Um pouco maior para dar destaque */
+    color: #2c3e50;
+    /* Um tom escuro elegante */
+    font-weight: bold;
+    /* Peso mais forte para destacar */
+    margin-top: 10px;
+    display: block;
+}
+
+.titulo_pix {
+    font-size: 20px;
+    color: var(--cor-de-fundo);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--cor-de-fundo);
+    margin: 0em 1em 0em 1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style-type: none;
+    color: var(--branco-principal);
+    margin: 2em 10em 2em 10em;
+}
+
+.rodape__logo {
+    margin-bottom: 2em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em;
+    margin-bottom: 2em;
+    gap: 3em;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: #fb081c;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.secundario__imagem {
+    width: 60%;
+}
+
+.imagem_pix {
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+    border-radius: 10px;
+    /* Borda arredondada opcional */
+    width: 400px;
+}
+
+.imagem_pix:hover {
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
+}
+
+.imagemF {
+    align-items: center;
+}
+
+.imagem {
+    object-fit: contain;
+    /* Mantém a proporção da imagem */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+    border-radius: 10px;
+    /* Borda arredondada opcional */
+    width: 400px;
+    height: 350px;
+}
+
+.imagem:hover {
+    transform: scale(1.2);
+    /* Aumenta a imagem em 10% */
+}
+
+.tamanho__grid {
+    width: 400px;
+    height: 600px;
+}
+
+
+
+/* Estilos responsivos */
+
+
+@media (max-width: 1080px) {
+    .container_principal {
+        margin-top: 2em;
+        height: 65vh;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        padding: 1em;
+        font-size: 15px;
+        font-weight: 400;
+        width: 6em;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .container__secundario {
+        grid-template-columns: auto auto;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 821px) {
+    .container_principal {
+        margin-top: 0;
+        height: 60vh;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        top: 8em;
+        padding: 1em;
+        font-size: 15px;
+        font-weight: 400;
+        width: 6em;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .container__secundario {
+        grid-template-columns: auto auto;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+}
+@media (max-width: 600px) {
+    .container_principal {
+        background-position: top;
+        margin: 2em 0 0em;
+        height: 30vh;
+    }
+
+    .tamanho__grid {
+        width: 300px;
+        height: 500px;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        width: 30%;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
+
+    .contador {
+        position: relative;
+        top: 1em;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        transform: none;
+        font-size: 20px;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .secundario__imagem.imagem {
+        width: 60vw;
+    }
+
+    .container__secundario {
+        grid-template-columns: 1fr;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+
+    .imagem_pix {
+        width: 300px;
+    }
+
+    .imagem {
+        height: unset;
+    }
+
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+    .links {
+        font-size: 15px;
+        border-radius: 3px;
+        border-bottom: 1px solid black;
+    }
+
+    .container_links {
+        display: grid;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .container_principal {
+        background-position: top;
+        margin: 1em 0 0em;
+        height: 26vh;
+    }
+
+    .tamanho__grid {
+        width: 300px;
+        height: 450px;
+    }
+
+    .container__botaoLogin,
+    .container__botaoCadastro {
+        width: 30%;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 12px;
+    }
+
+    .contador {
+        position: relative;
+        top: 1em;
+        width: 70%;
+        margin: 0 auto;
+        left: 0;
+        transform: none;
+        font-size: 20px;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .secundario__imagem.imagem {
+        width: 60vw;
+    }
+
+    .container__secundario {
+        grid-template-columns: 1fr;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+
+    .imagem_pix {
+        width: 300px;
+    }
+
+    .imagem {
+        height: unset;
+    }
+
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+    .links {
+        font-size: 15px;
+        border-radius: 3px;
+        border-bottom: 1px solid black;
+    }
+
+    .container_links {
+        display: grid;
+        margin-bottom: 2em;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .container_principal {
+        background-position: top;
+        margin: 2em 0 0em;
+        height: 32vh;
+    }
+
+    .tamanho__grid {
+        width: 300px;
+        height: 450px;
+    }
+
+    .contador {
+        position: relative;
+        top: 1em;
+        left: 0;
+        margin: auto;
+        font-size: 18px;
+        transform: none;
+    }
+
+    .descricao__texto {
+        font-size: 24px;
+    }
+
+    .secundario__imagem.imagem {
+        width: 60vw;
+    }
+
+    .container__secundario {
+        grid-template-columns: 1fr;
+    }
+
+    .container__botao {
+        margin-top: 1em;
+    }
+
+    .imagem_pix {
+        width: 300px;
+    }
+
+    .imagem {
+        height: unset;
+    }
+
+    .dispositivos__titulo {
+        font-size: 22px;
+    }
+
+    .links {
+        font-size: 15px;
+        border-radius: 3px;
+        border-bottom: 1px solid black;
+    }
+
+    .container_links {
+        display: grid;
+    }
+} 
