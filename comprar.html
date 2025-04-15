@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar Veículos - AutoMarket</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">AutoSeguro</a>
+            <a href="index.html" class="logo">AutoMarket</a>
             <nav>
                 <a href="login.html">Entrar</a>
                 <a href="cadastro.html">Cadastre-se</a>
             </nav>
         </div>
     </header>
-    
+
     <main class="container">
         <h1>Veículos Disponíveis</h1>
-        
+
         <div class="search-bar">
             <input type="text" placeholder="Buscar veículos..." class="search-input">
             <select class="search-select">
@@ -30,30 +32,100 @@
             </select>
             <button class="action-button buy-button">Buscar</button>
         </div>
-        
+
         <div class="vehicle-list">
-            <!-- Exemplo de card de veículo -->
+            <!-- Carro 1 - Fiat Argo -->
             <div class="vehicle-card">
-                <div class="vehicle-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                <img class="vehicle-image"
+                    src='https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'></img>
                 <div class="vehicle-info">
-                    <h3>Fiat Argo Drive 1.3 2020</h3>
+                    <h3>Volkswagen Polo 1.0 2020</h3>
                     <div class="vehicle-price">R$ 62.900</div>
                     <div class="vehicle-details">
-                        <p>30.000 km | 1.3 Flex | Manual</p>
+                        <p>30.000 km | 1.0 Flex | Manual</p>
                         <p>Belo Horizonte - MG</p>
                     </div>
                     <button class="action-button buy-button">Ver detalhes</button>
                 </div>
             </div>
-            
-            <!-- Mais veículos... -->
+
+            <!-- Carro 2 - Volkswagen Gol -->
+            <div class="vehicle-card">
+                <img class="vehicle-image"
+                    src='https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'"></img>
+                <div class="vehicle-info">
+                    <h3>BMW M3 Compettion 2021</h3>
+                    <div class="vehicle-price">R$ 215.990</div>
+                    <div class="vehicle-details">
+                        <p>22.000 km | 3.0 Flex | Manual</p>
+                        <p>São Paulo - SP</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 3 - Chevrolet Onix -->
+            <div class="vehicle-card">
+                <img class="vehicle-image" src="img/palio.png" ></img>
+                <div class="vehicle-info">
+                    <h3>Fiat Palio 2015 1.0 Completo</h3>
+                    <div class="vehicle-price">R$ 39.900</div>
+                    <div class="vehicle-details">
+                        <p>15.000 km | 1.0 Flex | Manual</p>
+                        <p>Rio de Janeiro - RJ</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
+            <!-- Carro 4 - Hyundai HB20 -->
+            <div class="vehicle-card">
+                <img class="vehicle-image" src="img/hb20.png"></img>
+                <div class="vehicle-info">
+                    <h3>Hyundai HB20 1.6 Comfort 2021</h3>
+                    <div class="vehicle-price">R$ 65.800</div>
+                    <div class="vehicle-details">
+                        <p>18.000 km | 1.6 Flex | Manual</p>
+                        <p>Curitiba - PR</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 5 - Ford Ka -->
+            <div class="vehicle-card">
+                <img class="vehicle-image" src="img/fordka.png"></img>
+                <div class="vehicle-info">
+                    <h3>Ford Ka 1.5 SE 2019</h3>
+                    <div class="vehicle-price">R$ 49.900</div>
+                    <div class="vehicle-details">
+                        <p>45.000 km | 1.5 Flex | Manual</p>
+                        <p>Porto Alegre - RS</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
+
+            <!-- Carro 6 - Renault Kwid -->
+            <div class="vehicle-card">
+                <img class="vehicle-image" src="img/kwid.png"></img>
+                <div class="vehicle-info">
+                    <h3>Renault Kwid 1.0 Zen 2020</h3>
+                    <div class="vehicle-price">R$ 53.500</div>
+                    <div class="vehicle-details">
+                        <p>25.000 km | 1.0 Flex | Manual</p>
+                        <p>Salvador - BA</p>
+                    </div>
+                    <button class="action-button buy-button">Ver detalhes</button>
+                </div>
+            </div>
         </div>
     </main>
-    
+
     <footer>
         <div class="container">
-            <p>&copy; 2023 AutoSeguro - Todos os direitos reservados</p>
+            <p>&copy; 2023 AutoMarket - Todos os direitos reservados</p>
         </div>
     </footer>
 </body>
+
 </html>
