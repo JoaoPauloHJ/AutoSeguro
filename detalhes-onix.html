@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chevrolet Onix Plus 1.0 Turbo 2022 - AutoMarket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos específicos para a página de detalhes */
+        .vehicle-detail {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .spec-item {
+            border-left: 3px solid #1e50a2;
+            padding-left: 15px;
+        }
+        
+        .contact-seller {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo">AutoMarket</a>
+            <nav>
+                <a href="../login.html">Entrar</a>
+                <a href="../cadastro.html">Cadastre-se</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <a href="../comprar.html" class="back-link">← Voltar para a lista</a>
+        
+        <div class="vehicle-detail">
+            <h1>Chevrolet Onix Plus 1.0 Turbo 2022</h1>
+            <div class="vehicle-price">R$ 79.900</div>
+            
+            <!-- IMAGEM PRINCIPAL FUNCIONAL -->
+            <img src="img/onix/Onix-frente.png" 
+                 alt="Chevrolet Onix Plus 2022" 
+                 class="main-image">
+            
+            <div class="gallery">
+                <!-- IMAGENS DA GALERIA QUE FUNCIONAM -->
+                <img src="https://img.olx.com.br/images/23/235504625278596.webp" alt="Interior Onix Plus">
+                <img src="https://img.olx.com.br/images/22/228587142877701.webp" alt="Lateral Onix Plus">
+                <img src="https://img.olx.com.br/images/22/227547504918031.webp" alt="Traseira Onix Plus">
+                <img src="https://img.olx.com.br/images/22/227585021688996.webp" alt="Detalhes Onix Plus">
+            </div>
+            
+            <div class="vehicle-description">
+                <h2>Descrição do Veículo</h2>
+                <p>Chevrolet Onix Plus 1.0 Turbo 2022, completo, único dono, revisões sempre na concessionária. Veículo impecável, sem detalhes, pintura original, interior conservado. Aceito proposta e troca por veículo de menor valor.</p>
+                
+                <ul>
+                    <li>Único dono</li>
+                    <li>Documento em dia</li>
+                    <li>Nunca sofreu acidentes</li>
+                    <li>Garantia de fábrica até 2024</li>
+                    <li>Todas as revisões em dia</li>
+                </ul>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3>Informações Básicas</h3>
+                    <p><strong>Marca:</strong> Chevrolet</p>
+                    <p><strong>Modelo:</strong> Onix Plus Premier</p>
+                    <p><strong>Ano:</strong> 2022</p>
+                    <p><strong>Quilometragem:</strong> 15.000 km</p>
+                </div>
+                
+                <div class="spec-item">
+                    <h3>Motor e Desempenho</h3>
+                    <p><strong>Motor:</strong> 1.0 Turbo Flex</p>
+                    <p><strong>Potência:</strong> 116 cv</p>
+                    <p><strong>Câmbio:</strong> Automático 6 marchas</p>
+                    <p><strong>Direção:</strong> Hidráulica</p>
+                </div>
+                
+                <div class="spec-item">
+                    <h3>Itens de Série</h3>
+                    <p>Ar-condicionado digital</p>
+                    <p>Multimídia com Android Auto</p>
+                    <p>Sensor de estacionamento</p>
+                    <p>Câmera de ré</p>
+                </div>
+                
+                <div class="spec-item">
+                    <h3>Segurança</h3>
+                    <p>6 airbags</p>
+                    <p>Controle de estabilidade</p>
+                    <p>Freios ABS</p>
+                    <p>Isofix</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Intens Adicionais</h3>
+                    <p>Som Automotivo</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                
+            </div>
+
+            
+            
+            <div class="contact-seller">
+                <h2>Fale com o Vendedor</h2>
+                <p><strong>Anunciante:</strong> Carlos Silva</p>
+                <p><strong>Localização:</strong> Rio de Janeiro - RJ</p>
+                <p><strong>Telefone:</strong> (21) 98765-4321</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" placeholder="Digite sua mensagem para o vendedor..." required></textarea>
+                    </div>
+                    <button type="submit" class="action-button buy-button">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AutoMarket - Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>
