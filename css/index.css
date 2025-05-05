@@ -1,108 +1,31 @@
-:root {
-    --cor-principal: #0f0f0f;         /* Fundo principal bem escuro */
-    --cor-secundaria: #1f1f1f;        /* Seções e cards */
-    --cor-destaque: #f43f5e;          /* Rosa avermelhado (botões ou ações) */
-    --cor-acento: #3b82f6;            /* Azul moderno */
-    --cor-de-suporte: #9ca3af;        /* Texto secundário */
-    --cor-de-sucesso: #10b981;        /* Verde para mensagens positivas */
-    --cor-de-fundo: #ffffff;          /* Texto branco */
-    --cor-hover-botao: #2563eb;       /* Azul hover */
-
-    --fonte-principal: 'Inter', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background: rgb(45, 211, 111);
+    height: 100vh;
 }
 
-header {
-    background-color: #1e50a2;
-    color: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+form {
+    width: 300px;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.main-content {
-    text-align: center;
-    padding: 50px 0;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #1e50a2;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.action-button {
-    padding: 20px 40px;
-    font-size: 20px;
+input {
     border: none;
-    border-radius: 5px;
+}
+
+input,
+button {
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+button {
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.buy-button {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.sell-button {
-    background-color: #f44336;
-    color: white;
-}
-
-.action-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+button:disabled:active {
+    opacity: 0.5;
 }

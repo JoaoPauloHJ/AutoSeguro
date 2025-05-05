@@ -1,72 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>AutoSeguro - Compra e Venda de Veículos</title>
-    
-</head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">AutoSeguro</div>
-            <nav>
-                <a href="#">Entrar</a>
-                <a href="#">Cadastre-se</a>
-            </nav>
-        </div>
-    </header>
-    
-    <main class="main-content">
-        <div class="container">
-            <h1>Bem-vindo ao AutoSeguro</h1>
-            <p>O melhor lugar para comprar e vender veículos online</p>
-            
-            <div class="buttons-container">
-                <button class="action-button buy-button" onclick="window.location.href='comprar.html'">Quero Comprar</button>
-                <button class="action-button sell-button" onclick="window.location.href='vender.html'">Quero Vender</button>
-            </div>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 AutoSeguro - Todos os direitos reservados</p>
-        </div>
-    </footer>
-</body>
-</html>
-<!-- <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Auto Seguro</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Login - Controle Financeiro</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+
+    <script src="script.js"></script>
+    <script src="validations.js"></script>
+    <script src="loading.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDVHRUY3NfKHDLP4jK-3STAEj0qiLNwS0k",
+            authDomain: "controle-de-gastos-2b601.firebaseapp.com",
+            projectId: "controle-de-gastos-2b601",
+            storageBucket: "controle-de-gastos-2b601.firebasestorage.app",
+            messagingSenderId: "568892239367",
+            appId: "1:568892239367:web:1912f4c27ad5ad0aea44a2"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 
-<body>
+<body class="centralize">
 
-    <<section class="container_principal">
-        <h1 class="titulo_principal">StartCar Brasil</h1>
-        <h2 class="titulo_principal">A direção certa para o seu próximo carro.</h2>
-    </section>
-    
-    <section class="container_links">
+    <form>
+        
+        <main class="main-content">
+            <div class="container">
+                <h1>Bem-vindo ao AutoSeguro</h1>
+                <p>O melhor lugar para comprar e vender veículos online</p>
+            </div>
+        </main>
 
-        <div class="links-row">
-            <a href="index.html" class="links">Comprar um Veiculo</a>
-            <a href="index.html" class="links">Vender Veiculo</a>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" oninput="onChangeEmail()" placeholder="seu@email.com" />
+            <div class="error" id="email-required-error">Email é obrigatório</div>
+            <div class="error" id="email-invalid-error">Email é inválido</div>
         </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="senha" id="password" oninput="onChangePassword()"
+                placeholder="Digite sua senha" />
+            <div class="error" id="password-required-error">Senha é obrigatório</div>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled>Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
 
-    </section> 
-    <script src="comandos.js"></script>
 </body>
 
-</html> -->
+
+</html>
