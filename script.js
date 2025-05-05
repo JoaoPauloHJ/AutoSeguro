@@ -33,15 +33,29 @@ function login() {
     });
 }
 
-function getErrorMessage(error) {
-    if (error.code == "auth/user-not/found") {
-        return "Usuário nao encontrado";
-    }
-    return error.menssage
-}
-
 function register() {
     window.location.href = "Paginas/Registro/registroFinan.html"
+}
+
+
+function getErrorMessage(error) {
+    if (error.code == "auth/user-not-found") {
+        return "Usuário não encontrado";
+    }
+    if (error.code == "auth/invalid-credential") {
+        return "Senha inválida";
+    }
+}
+
+function recoverPassword() {
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+        hideLoading();
+        alert('Email enviado com sucesso');
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    });
 }
 
 function isEmailValid() {
