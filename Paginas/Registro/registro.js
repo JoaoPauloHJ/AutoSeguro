@@ -31,7 +31,7 @@ function register() {
         email, senha
     ).then(() => {
         hideLoading();
-        window.location.href = "../../Paginas/Home/homeFinan.html";
+        window.location.href = "../../principal.html";
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
