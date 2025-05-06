@@ -22,6 +22,29 @@ function onChangeConfirmPassword() {
 
 }
 
+function register() {
+    showLoading();
+
+    const email = form.email().value;
+    const senha = form.senha().value;
+    firebase.auth().createUserWithEmailAndPassword(
+        email, senha
+    ).then(() => {
+        hideLoading();
+        window.location.href = "../../Paginas/Home/homeFinan.html";
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    });
+}
+
+function getErrorMessage(error) {
+    if (error.code == "auth/email-already-in-use") {
+        return "Email já está em uso";
+    }
+    return error.message;
+}
+
 function validarSenhasIguais() {
     const senha = form.senha().value;
     const confirmarSenha = form.confirmarSenha().value;
