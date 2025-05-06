@@ -21,7 +21,7 @@ button {
 .clear {
     background: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .loading {
@@ -41,19 +41,19 @@ button {
 }
 
 .solid {
-    background: white;
+    background: rgb(0, 0, 0);
     border: none;
-    color: rgb(45, 211, 111);
+    color: #2563eb;
 }
 
 .outline {
     background: transparent;
-    color: white;
-    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .error {
-    color: white;
+    color: rgb(0, 0, 0);
     background: red;
     display: none;
 }

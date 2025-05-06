@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/principal.css">
 
     <script src="script.js"></script>
     <script src="validations.js"></script>
@@ -14,23 +15,21 @@
     <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
 
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDVHRUY3NfKHDLP4jK-3STAEj0qiLNwS0k",
-            authDomain: "controle-de-gastos-2b601.firebaseapp.com",
-            projectId: "controle-de-gastos-2b601",
-            storageBucket: "controle-de-gastos-2b601.firebasestorage.app",
-            messagingSenderId: "568892239367",
-            appId: "1:568892239367:web:1912f4c27ad5ad0aea44a2"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="firebase-ini.js"></script>
 </head>
 
 <body class="centralize">
 
     <form>
-        
+        <header>
+            <div class="container header-content">
+                <div class="logo">AutoSeguro</div>
+                <nav>
+
+                </nav>
+            </div>
+        </header>
+
         <main class="main-content">
             <div class="container">
                 <h1>Bem-vindo ao AutoSeguro</h1>
@@ -40,7 +39,8 @@
 
         <div class="form-field">
             <div><label>Email</label></div>
-            <input type="email" name="email" id="email" oninput="onChangeEmail()" placeholder="seu@email.com" />
+            <input type="email" name="email" id="email" oninput="onChangeEmail()" 
+            placeholder="seu@email.com" />
             <div class="error" id="email-required-error">Email é obrigatório</div>
             <div class="error" id="email-invalid-error">Email é inválido</div>
         </div>
@@ -51,10 +51,12 @@
             <div class="error" id="password-required-error">Senha é obrigatório</div>
         </div>
         <div>
-            <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" disabled>Recuperar senha</button>
+            <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()"
+                disabled>Recuperar senha</button>
         </div>
         <div>
-            <button type="button" class="solid" id="login-button" disabled onclick="login()">Entrar</button>
+            <button type="button" class="solid" id="login-button" disabled onclick="login()"
+            >Entrar</button>
         </div>
         <div>
             <button type="button" class="outline" onclick="register()">Registrar</button>
