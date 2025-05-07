@@ -31,7 +31,7 @@ function register() {
         email, senha
     ).then(() => {
         hideLoading();
-        window.location.href = "../../principal.html";
+        window.location.href = "../../index.html";
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
