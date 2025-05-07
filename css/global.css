@@ -1,4 +1,18 @@
+:root {
+    --cor-principal: #0f0f0f;         /* Fundo principal bem escuro */
+    --cor-secundaria: #1f1f1f;        /* Seções e cards */
+    --cor-destaque: #f43f5e;          /* Rosa avermelhado (botões ou ações) */
+    --cor-acento: #3b82f6;            /* Azul moderno */
+    --cor-de-suporte: #9ca3af;        /* Texto secundário */
+    --cor-de-sucesso: #10b981;        /* Verde para mensagens positivas */
+    --cor-de-fundo: #ffffff;          /* Texto branco */
+    --cor-hover-botao: #2563eb;       /* Azul hover */
+
+    --fonte-principal: 'Inter', sans-serif;
+}
+
 body {
+    background: var(--cor-de-sucesso);
     margin: 0;
 }
 

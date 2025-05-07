@@ -1,4 +1,12 @@
 //Todas as funções do site
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        window.location.href = "Paginas/Home/homeFinan.html"
+    }
+})
+
+
 function onChangeEmail() {
     toggleButtonDisable();
     toggleEmailErrors();
